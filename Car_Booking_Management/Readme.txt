@@ -1,1 +1,1 @@
-TMUberUI.java is the main file where customer will perform action on.
+TMUberUI.java is the main file where customers will perform action on.
