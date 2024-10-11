@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AlarmClock
-build_property.ProjectDir = E:\TMU\Fall 2024\CPS613\Main\AlarmClock\
+build_property.ProjectDir = E:\Project\Project\AlarmClock\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
