@@ -28,6 +28,7 @@ Partial Class AlarmClock
         Timer2 = New Timer(components)
         tab = New TabControl()
         TabPage1 = New TabPage()
+        TimePanelClock = New TimePanel()
         panelKeypadClock = New Panel()
         OKClock = New Button()
         Number9Clock = New Button()
@@ -42,7 +43,6 @@ Partial Class AlarmClock
         Number4Clock = New Button()
         Number1Clock = New Button()
         PictureBox1 = New PictureBox()
-        ResetClock = New Button()
         SetClock = New Button()
         CheckBox5 = New CheckBox()
         CheckBox4 = New CheckBox()
@@ -71,7 +71,7 @@ Partial Class AlarmClock
         lblClock.BackColor = Color.Black
         lblClock.Font = New Font("Segoe UI", 100.0F, FontStyle.Regular, GraphicsUnit.Point)
         lblClock.ForeColor = Color.Red
-        lblClock.Location = New Point(105, 0)
+        lblClock.Location = New Point(89, 0)
         lblClock.Name = "lblClock"
         lblClock.Size = New Size(459, 177)
         lblClock.TabIndex = 0
@@ -90,13 +90,14 @@ Partial Class AlarmClock
         tab.Location = New Point(-3, 1)
         tab.Name = "tab"
         tab.SelectedIndex = 0
-        tab.Size = New Size(651, 809)
+        tab.Size = New Size(1021, 809)
         tab.TabIndex = 1
         ' 
         ' TabPage1
         ' 
         TabPage1.BackColor = Color.White
         TabPage1.BackgroundImageLayout = ImageLayout.Center
+        TabPage1.Controls.Add(TimePanelClock)
         TabPage1.Controls.Add(panelKeypadClock)
         TabPage1.Controls.Add(PictureBox1)
         TabPage1.Controls.Add(ResetClock)
@@ -110,9 +111,16 @@ Partial Class AlarmClock
         TabPage1.Location = New Point(4, 24)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
-        TabPage1.Size = New Size(643, 781)
+        TabPage1.Size = New Size(1013, 781)
         TabPage1.TabIndex = 0
         TabPage1.Text = "Clock"
+        ' 
+        ' TimePanelClock
+        ' 
+        TimePanelClock.Location = New Point(548, 3)
+        TimePanelClock.Name = "TimePanelClock"
+        TimePanelClock.Size = New Size(459, 177)
+        TimePanelClock.TabIndex = 18
         ' 
         ' panelKeypadClock
         ' 
@@ -335,7 +343,7 @@ Partial Class AlarmClock
         Alarm01.Controls.Add(AlarmPanel1)
         Alarm01.Location = New Point(4, 24)
         Alarm01.Name = "Alarm01"
-        Alarm01.Size = New Size(643, 781)
+        Alarm01.Size = New Size(192, 72)
         Alarm01.TabIndex = 2
         Alarm01.Text = "Alarm1"
         Alarm01.UseVisualStyleBackColor = True
@@ -352,7 +360,7 @@ Partial Class AlarmClock
         Alarm02.Controls.Add(AlarmPanel2)
         Alarm02.Location = New Point(4, 24)
         Alarm02.Name = "Alarm02"
-        Alarm02.Size = New Size(643, 781)
+        Alarm02.Size = New Size(192, 72)
         Alarm02.TabIndex = 3
         Alarm02.Text = "Alarm2"
         Alarm02.UseVisualStyleBackColor = True
@@ -370,7 +378,7 @@ Partial Class AlarmClock
         Alarm03.Location = New Point(4, 24)
         Alarm03.Name = "Alarm03"
         Alarm03.Padding = New Padding(3)
-        Alarm03.Size = New Size(643, 781)
+        Alarm03.Size = New Size(192, 72)
         Alarm03.TabIndex = 4
         Alarm03.Text = "Alarm3"
         Alarm03.UseVisualStyleBackColor = True
@@ -386,7 +394,7 @@ Partial Class AlarmClock
         ' 
         AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(644, 421)
+        ClientSize = New Size(1030, 925)
         Controls.Add(tab)
         Name = "AlarmClock"
         StartPosition = FormStartPosition.CenterScreen
@@ -448,5 +456,6 @@ Partial Class AlarmClock
     Friend WithEvents AlarmPanel1 As AlarmPanel
     Friend WithEvents AlarmPanel2 As AlarmPanel
     Friend WithEvents AlarmPanel3 As AlarmPanel
+    Friend WithEvents TimePanelClock As TimePanel
 
 End Class

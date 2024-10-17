@@ -3,23 +3,19 @@ Imports System.Runtime.CompilerServices
 
 
 Public Class AlarmClock
+    Private activeTimePanel As TimePanel
+    Private keypadButtons As Button()
     Private soundPlayer As SoundPlayer
     Private soundPath As String = ""
     Private originalHeight As Integer
     Private currentInput_Alarm1 As String = ""
-    Private currentInput_Alarm2 As String = ""
-    Private currentInput_Alarm3 As String = ""
     Private currentInput_Clock As String = ""
     Private previousAlarm As String = "00:00" ' Variable to store the previous alarm time
-    Private previousAlarm3 As String = "00:00"
-    Private previousAlarm2 As String = "00:00"
     Private customClockTime As DateTime = DateTime.Now 'Variable to store the time
-    'Set the picture for alarm tab
-
 
 
     Public Sub StopAlarmSound()
-        If SoundPlayer IsNot Nothing Then
+        If soundPlayer IsNot Nothing Then
             soundPlayer.Stop() ' Stop 
             soundPath = "" 'path
         End If
@@ -43,6 +39,18 @@ Public Class AlarmClock
         Timer2.Interval = 600
         Timer2.Start()
         label.Text = customClockTime.ToString("hh:mm")
+        'UpdateTimePanel()
+    End Sub
+
+    Private Sub UpdateTimePanel()
+        Dim hours As Integer = customClockTime.Hour Mod 12
+        If hours = 0 Then hours = 12 ' Handle 12-hour format
+        TimePanelClock.Digitled0.DigitValue = hours \ 10 ' Tens place for hours
+        TimePanelClock.Digitled1.DigitValue = hours Mod 10 ' Ones place for hours
+        TimePanelClock.Digitled2.DigitValue = customClockTime.Minute \ 10 ' Tens place for minutes
+        TimePanelClock.Digitled3.DigitValue = customClockTime.Minute Mod 10 ' Ones place for minutes
+        TimePanelClock.AM.Checked = customClockTime.Hour < 12
+        TimePanelClock.PM.Checked = customClockTime.Hour >= 12
     End Sub
 
     Private Sub Picture()
@@ -58,9 +66,11 @@ Public Class AlarmClock
         Picture()
         SetLabel(lblClock)
         originalHeight = Me.Height
-
+        keypadButtons = {Number1Clock, Number2Clock, Number3Clock, Number4Clock, Number5Clock, Number6Clock, Number7Clock, Number8Clock, Number9Clock, Number0Clock}
         AddHandler AlarmPanel1.AlarmOn.CheckedChanged, AddressOf CheckBoxWithAlarm
-
+        For Each button In keypadButtons
+            AddHandler button.Click, AddressOf KeypadButton_Click
+        Next
 
 
 
@@ -109,127 +119,48 @@ Public Class AlarmClock
 
     End Sub
 
+    'Show Panel When the Set button Is pressed
+    Public Sub ShowKeypadPanel(timePanel As TimePanel)
+        activeTimePanel = timePanel ' Reference the active TimePanel (Clock or Alarm)
+        panelKeypadClock.Visible = True
+        ' Adjust form size to fit the keypad
+        Me.Height += panelKeypadClock.Height
+        UpdateKeypadButtons()
+    End Sub
 
+    'Button reset Is pressed
+    Public Sub ResetCLock1(sender As Object, e As EventArgs)
+        customClockTime = DateTime.Now
+        SetLabel(lblClock)
+    End Sub
+    Public Sub HideKeypadPanel()
+        If activeTimePanel IsNot Nothing Then
+            activeTimePanel = Nothing
+        End If
+        panelKeypadClock.Visible = False
+        Me.Height -= panelKeypadClock.Height
+    End Sub
 
-    'button set Alarm1'
+    'Keypad Button Click
+    Private Sub KeypadButton_Click(sender As Object, e As EventArgs)
+        Dim button As Button = DirectCast(sender, Button)
+        Dim digit As Integer = Integer.Parse(button.Text)
+        If activeTimePanel IsNot Nothing Then
+            activeTimePanel.InputDigit(digit)
+            UpdateKeypadButtons()
+        End If
+    End Sub
 
-    'Show the keypad panel
+    ''Update Keypad Buttons
+    Private Sub UpdateKeypadButtons()
+        If activeTimePanel IsNot Nothing Then
+            For Each button As Button In keypadButtons
+                Dim digit As Integer = Integer.Parse(button.Text)
+                button.Enabled = activeTimePanel.IsDigitValid(digit)
+            Next
+        End If
+    End Sub
 
-
-    'button set Alarm2
-    'Private Sub btnSetAlarm2_Click(sender As Object, e As EventArgs) Handles btnSetAlarm2.Click
-    '    panelKeypad2.Visible = True
-    '    tab.Height += panelKeypad2.Height
-    '    Height += panelKeypad2.Height
-    '    btnSetAlarm2.Enabled = False
-    '    btnResetAlarm2.Enabled = False
-    'End Sub
-
-    ''button set Alarm3
-    'Private Sub ButtonSet3_Click(sender As Object, e As EventArgs) Handles btnSetAlarm3.Click
-    '    panelKeypad3.Visible = True
-    '    tab.Height += panelKeypad3.Height
-    '    Height += panelKeypad3.Height
-    '    btnSetAlarm3.Enabled = False
-    '    btnResetAlarm3.Enabled = False
-    'End Sub
-
-    ''button cancel for alarm 1
-    'Private Sub Cancel_btn()
-    '    'tab.Height -= panelKeypad1.Height
-    '    Height -= panelKeypadClock.Height
-    '    panelKeypadClock.Visible = False
-    '    btnSet.Enabled = True
-    '    btnReset.Enabled = True
-    '    currentInput_Alarm1 = ""
-    '    Alarm1.Text = previousAlarm ' Restore the previous alarm time
-    'End Sub
-
-
-    ''button reset for alarm 3
-    'Private Sub btnResetAlarm3_Click(sender As Object, e As EventArgs) Handles btnResetAlarm3.Click
-    '    Alarm_Set3(Alarm3)
-    'End Sub
-    'Private Sub btnResetAlarm2_Click(sender As Object, e As EventArgs) Handles btnResetAlarm2.Click
-    '    Alarm_Set2(Alarm2)
-    'End Sub
-    ''Private Sub btnReset_Click(sender As Object, e As EventArgs)
-    ''    Alarm_Set(Alarm1)
-    ''End Sub
-
-    'Alarm 1 Keypad button click
-
-    'Private Sub KeypadButton_Click(sender As Object, e As EventArgs) Handles Number1Clock.Click, Number2Clock.Click, Number3Clock.Click, Number4Clock.Click, Number5Clock.Click, Number6Clock.Click, Number7Clock.Click, Number8Clock.Click, Number9Clock.Click, Number0Clock.Click
-    '    Dim buttonValue = DirectCast(sender, Button).Text
-    '    currentInput_Alarm1 &= buttonValue
-    '    UpdateAlarmDisplay(currentInput_Alarm1)
-    'End Sub
-
-    ''Private Sub UpdateAlarmDisplay(input As String)
-    ''    'Dim firstHourDigit As String = "0"
-    ''    'Dim secondHourDigit As String = "0"
-    ''    'Dim firstMinuteDigit As String = "0"
-    ''    'Dim secondMinuteDigit As String = "0"
-
-    ''    Select Case input.Length
-    ''        Case 1
-
-    ''            If input(0) > "1"c Then
-    ''                currentInput_Alarm1 = ""
-    ''            Else
-
-    ''                Alarm1.Text = input & "0" & ":00" ' "0X:00"
-    ''            End If
-    ''        Case 2
-    ''            Dim firstDigit As Char = input(0)
-    ''            Dim secondDigit As Char = input(1)
-
-
-    ''            If firstDigit = "0"c And secondDigit = "0"c Then
-    ''                'Alarm1.Text = "Invalid Input"
-    ''                currentInput_Alarm1 = firstDigit + ""
-    ''            ElseIf firstDigit = "1"c And secondDigit > "2"c Then
-    ''                'Alarm1.Text = "Invalid Input"
-    ''                currentInput_Alarm1 = firstDigit + ""
-    ''            Else
-    ''                Alarm1.Text = input & ":00"
-    ''            End If
-    ''        Case 3
-
-    ''            If input(2) > "5"c Then
-    ''                'Alarm1.Text = "Invalid Input"
-    ''                currentInput_Alarm1 = input(0) + input(1) + ""
-    ''            Else
-    ''                Alarm1.Text = input.Substring(0, 2) & ":" & input(2) & "0" ' "XX:X0"
-    ''            End If
-    ''        Case 4
-
-
-    ''            Alarm1.Text = input.Substring(0, 2) & ":" & input.Substring(2) ' "XX:XX"
-    ''        Case Else
-    ''            'Alarm1.Text = "Invalid Input"
-    ''    End Select
-    ''End Sub
-
-    ''Button cancel for alarm 1
-    'Private Sub ButtonCancel_Click(sender As Object, e As EventArgs)
-    '    Cancel_btn()
-    'End Sub
-
-
-    ''Button OK for alarm 1
-    'Private Sub ButtonOK_Click(sender As Object, e As EventArgs)
-    '    If currentInput_Alarm1.Length > 0 Then
-    '        previousAlarm = Alarm1.Text ' Save the current alarm time before updating
-    '        UpdateAlarmDisplay(currentInput_Alarm1) ' Update the alarm display
-    '    End If
-    '    currentInput_Alarm1 = "" ' Clear the current input after confirming
-    '    'tab.Height -= panelKeypadClock.Height
-    '    Height -= panelKeypadClock.Height
-    '    panelKeypadClock.Visible = False
-    '    btnSet.Enabled = True
-    '    btnReset.Enabled = True
-    'End Sub
 
 
     Private Sub SetClock_Click(sender As Object, e As EventArgs) Handles SetClock.Click
@@ -256,16 +187,18 @@ Public Class AlarmClock
 
     End Sub
 
-    Private Sub ResetClock_Click(sender As Object, e As EventArgs) Handles ResetClock.Click
-        customClockTime = DateTime.Now
-        SetLabel(lblClock)
-    End Sub
+    'Private Sub ResetClock_Click(sender As Object, e As EventArgs) Handles ResetClock.Click
+    '    customClockTime = DateTime.Now
+    '    SetLabel(lblClock)
+    'End Sub
 
     Private Sub ClockPad_Click(sender As Object, e As EventArgs) Handles Number1Clock.Click, Number2Clock.Click, Number3Clock.Click, Number4Clock.Click, Number5Clock.Click, Number6Clock.Click, Number7Clock.Click, Number8Clock.Click, Number9Clock.Click, Number0Clock.Click
         Dim buttonValueClock = DirectCast(sender, Button).Text
         currentInput_Clock &= buttonValueClock
         UpdateClockDisplay(currentInput_Clock)
     End Sub
+
+
     Private Sub UpdateClockDisplay(input As String)
 
         ' Format the clock time based on the length of the input
@@ -405,4 +338,17 @@ Public Class AlarmClock
 
 
     '' Gif and image control
+
+
+
+
+
+
+
+
+
+
+
+
+
 End Class

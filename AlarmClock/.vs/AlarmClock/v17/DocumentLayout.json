@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "E:\\Project\\Project\\AlarmClock\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|e:\\project\\project\\alarmclock\\alarmpanel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|solutionrelative:alarmpanel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|e:\\project\\project\\alarmclock\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|e:\\project\\project\\alarmclock\\alarmclock.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|solutionrelative:alarmclock.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|e:\\project\\project\\alarmclock\\alarmpanel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|solutionrelative:alarmpanel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|e:\\project\\project\\alarmclock\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|solutionrelative:form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|e:\\project\\project\\alarmclock\\alarmpanel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|solutionrelative:alarmpanel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|e:\\project\\project\\alarmclock\\digitled.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|solutionrelative:digitled.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|e:\\project\\project\\alarmclock\\timepanel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|solutionrelative:timepanel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|e:\\project\\project\\alarmclock\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|e:\\project\\project\\alarmclock\\alarmpanel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|solutionrelative:alarmpanel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|e:\\project\\project\\alarmclock\\timepanel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{FB59EF51-D6FB-4E6A-AAAF-3CDFCED129EC}|AlarmClock.vbproj|solutionrelative:timepanel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,35 +37,31 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 265,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 253,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.vb",
               "DocumentMoniker": "E:\\Project\\Project\\AlarmClock\\Form1.vb",
               "RelativeDocumentMoniker": "Form1.vb",
-              "ToolTip": "E:\\Project\\Project\\AlarmClock\\Form1.vb",
-              "RelativeToolTip": "Form1.vb",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwDgAAABVAAAAAAAAAA==",
+              "ToolTip": "E:\\Project\\Project\\AlarmClock\\Form1.vb*",
+              "RelativeToolTip": "Form1.vb*",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAQwFsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-10-06T06:02:07.831Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AlarmPanel.vb",
               "DocumentMoniker": "E:\\Project\\Project\\AlarmClock\\AlarmPanel.vb",
               "RelativeDocumentMoniker": "AlarmPanel.vb",
               "ToolTip": "E:\\Project\\Project\\AlarmClock\\AlarmPanel.vb",
               "RelativeToolTip": "AlarmPanel.vb",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAiwBwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAswFEAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-10-10T22:44:23.202Z",
               "EditorCaption": ""
@@ -69,49 +69,62 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Form1.Designer.vb",
-              "DocumentMoniker": "E:\\Project\\Project\\AlarmClock\\Form1.Designer.vb",
-              "RelativeDocumentMoniker": "Form1.Designer.vb",
-              "ToolTip": "E:\\Project\\Project\\AlarmClock\\Form1.Designer.vb",
-              "RelativeToolTip": "Form1.Designer.vb",
-              "ViewState": "AgIAADcAAAAAAAAAAAArwPwAAAAAAAAAAAAAAA==",
+              "Title": "DigitLED.vb",
+              "DocumentMoniker": "E:\\Project\\Project\\AlarmClock\\DigitLED.vb",
+              "RelativeDocumentMoniker": "DigitLED.vb",
+              "ToolTip": "E:\\Project\\Project\\AlarmClock\\DigitLED.vb",
+              "RelativeToolTip": "DigitLED.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-10-09T18:27:18.178Z",
+              "WhenOpened": "2024-10-11T19:46:44.627Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AlarmClock",
-              "DocumentMoniker": "E:\\Project\\Project\\AlarmClock\\AlarmClock.vbproj",
-              "RelativeDocumentMoniker": "AlarmClock.vbproj",
-              "ToolTip": "E:\\Project\\Project\\AlarmClock\\AlarmClock.vbproj",
-              "RelativeToolTip": "AlarmClock.vbproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
-              "WhenOpened": "2024-10-10T04:39:07.39Z",
+              "DocumentIndex": 4,
+              "Title": "TimePanel.vb",
+              "DocumentMoniker": "E:\\Project\\Project\\AlarmClock\\TimePanel.vb",
+              "RelativeDocumentMoniker": "TimePanel.vb",
+              "ToolTip": "E:\\Project\\Project\\AlarmClock\\TimePanel.vb",
+              "RelativeToolTip": "TimePanel.vb",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwDEAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-10-11T20:53:27.347Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 135,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 147,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
+              "Title": "TimePanel.vb [Design]",
+              "DocumentMoniker": "E:\\Project\\Project\\AlarmClock\\TimePanel.vb",
+              "RelativeDocumentMoniker": "TimePanel.vb",
+              "ToolTip": "E:\\Project\\Project\\AlarmClock\\TimePanel.vb [Design]",
+              "RelativeToolTip": "TimePanel.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-10-11T20:33:11.734Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Form1.vb [Design]",
               "DocumentMoniker": "E:\\Project\\Project\\AlarmClock\\Form1.vb",
               "RelativeDocumentMoniker": "Form1.vb",
-              "ToolTip": "E:\\Project\\Project\\AlarmClock\\Form1.vb [Design]",
-              "RelativeToolTip": "Form1.vb [Design]",
+              "ToolTip": "E:\\Project\\Project\\AlarmClock\\Form1.vb [Design]*",
+              "RelativeToolTip": "Form1.vb [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-10-06T03:49:57.009Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "AlarmPanel.vb [Design]",
               "DocumentMoniker": "E:\\Project\\Project\\AlarmClock\\AlarmPanel.vb",
               "RelativeDocumentMoniker": "AlarmPanel.vb",

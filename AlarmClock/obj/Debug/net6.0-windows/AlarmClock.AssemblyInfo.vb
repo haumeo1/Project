@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("AlarmClock"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba62cafd927dbb23c336bce88d554a15a423188c"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5cba035f38753383f7138a9c77d0553a75726bce"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("AlarmClock"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("AlarmClock"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

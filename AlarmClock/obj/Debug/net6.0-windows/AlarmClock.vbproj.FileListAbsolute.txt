@@ -37,3 +37,5 @@ E:\Project\Project\AlarmClock\obj\Debug\net6.0-windows\AlarmClock.pdb
 E:\Project\Project\AlarmClock\obj\Debug\net6.0-windows\AlarmClock.genruntimeconfig.cache
 E:\Project\Project\AlarmClock\obj\Debug\net6.0-windows\ref\AlarmClock.dll
 E:\Project\Project\AlarmClock\obj\Debug\net6.0-windows\AlarmClock.AlarmPanel.resources
+E:\Project\Project\AlarmClock\obj\Debug\net6.0-windows\AlarmClock.DigitLED.resources
+E:\Project\Project\AlarmClock\obj\Debug\net6.0-windows\AlarmClock.TimePanel.resources
