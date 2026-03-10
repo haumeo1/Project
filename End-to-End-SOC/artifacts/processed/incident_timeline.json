@@ -1,0 +1,46 @@
+[
+  {
+    "timestamp": "2026-01-15T10:00:05Z",
+    "phase": "scan",
+    "tool": "nmap",
+    "severity": "medium",
+    "confidence": "high",
+    "src_ip": "192.168.56.101",
+    "dst_ip": "192.168.56.110",
+    "evidence": "SYN scan identified 21/tcp ftp vsftpd 2.3.4, 22/tcp ssh, 80/tcp http",
+    "attack_technique": "T1046"
+  },
+  {
+    "timestamp": "2026-01-15T10:05:18Z",
+    "phase": "exploit",
+    "tool": "metasploit",
+    "severity": "high",
+    "confidence": "high",
+    "src_ip": "192.168.56.101",
+    "dst_ip": "192.168.56.110",
+    "evidence": "Exploit module exploit/unix/ftp/vsftpd_234_backdoor succeeded; command shell session 1 opened",
+    "attack_technique": "T1190"
+  },
+  {
+    "timestamp": "2026-01-15T10:05:20Z",
+    "phase": "detect",
+    "tool": "splunk",
+    "severity": "high",
+    "confidence": "medium",
+    "src_ip": "192.168.56.101",
+    "dst_ip": "192.168.56.110",
+    "evidence": "Correlation search flagged exploit-like FTP traffic followed by shell callback",
+    "attack_technique": "T1190"
+  },
+  {
+    "timestamp": "2026-01-15T10:06:02Z",
+    "phase": "shell",
+    "tool": "metasploit",
+    "severity": "high",
+    "confidence": "high",
+    "src_ip": "192.168.56.101",
+    "dst_ip": "192.168.56.110",
+    "evidence": "Interactive shell established; whoami returned root",
+    "attack_technique": "T1059"
+  }
+]
